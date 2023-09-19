@@ -1,10 +1,10 @@
-# ThinTimer: 
+# ThinTimer
 
-![Logo or banner image](path/to/image.jpg)
+![Logo or banner image](assets/images/logo.png)
 
 ## Table of Contents
 
-- [ThinTimer:](#thintimer)
+- [ThinTimer](#thintimer)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Features](#features)

@@ -97,27 +97,27 @@ After setting up the development environment, visit `http://localhost:8000/` to 
 
 To execute all tests for all apps:
 
-\`\`\`
+```
 python manage.py test
-\`\`\`
+```
 
 To execute tests for a specific app:
 
-\`\`\`
+```
 python manage.py test <app_name>.tests
-\`\`\`
+```
 
 To execute a specific test class for a specific app run:
 
-\`\`\`
+```
 python manage.py test <app_name>.tests.<class_name>
-\`\`\`
+```
 
 To execute a specific test method in a specific class for a specific app run:
 
-\`\`\`
+```
 python manage.py test <app_name>.tests.<class_name>.<method_name>
-\`\`\`
+```
 
 ---
 

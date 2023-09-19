@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h1>Edit Entries</h1>
+
+    <!--  -->
+    <div style="display: flex; align-items: center;">
+        <button id="prevDayBtn">Previous Day</button>
+        <input type="date" id="datePicker" style="margin: 0 20px;">
+        <button id="nextDayBtn">Next Day</button>
+    </div>
+    
+    <!--  -->
+    <button id="showCreateEntryForm">Create New Entry</button>
+    <button id="deleteSelectedEntries">Delete Selected Entries</button>
+    <div id="createEntryFormContainer" style="display: none;">
+        {% csrf_token %}
+        <form id="createEntryForm">
+            <label for="taskDropdown">Task Name:</label>
+            <select id="taskDropdown" name="task_id" required>
+                <!-- Options will be populated here -->
+            </select>
+            <label for="entryStartTime">Start Time:</label>
+            <input type="time" id="entryStartTime" name="start_time" step='1' required>
+            <label for="entryEndTime">End Time:</label>
+            <input type="time" id="entryEndTime" name="end_time" step='1' required>
+            <input type="submit" value="Create Entry">
+        </form>
+    </div>
+
+    
+    <!--  -->
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Task Name</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Total Time</th>
+            </tr>
+        </thead>
+        <tbody id="entryTableBody">
+        </tbody>
+    </table>
+
+    <!--  -->
+    <script src="{% static 'js/edit_entries.js' %}"></script>
+{% endblock %}

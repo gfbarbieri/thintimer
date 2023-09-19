@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <title>Timer</title>
+        <style>
+            .task-item {
+                cursor: pointer;
+            }
+            .is-active {
+                font-weight: bold;
+                font-size: larger;
+            }
+        </style>
+    </head>
+    <body>
+        {% csrf_token %}
+        <h1 id="timerDisplay">00:00:00</h1>
+        <h2>Task List</h2>
+        <ul id="taskList">
+            <!-- Tasks will be populated here -->
+        </ul>
+
+    <script src="{% static 'js/timer.js' %}"></script>
+    </body>
+</html>

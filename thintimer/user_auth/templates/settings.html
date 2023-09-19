@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Settings</h1>
+
+    <!-- Section for updating the username -->
+    <form id="updateUsernameForm">
+        {% csrf_token %}
+        <label for="newUsername">New Username:</label>
+        <input type="text" id="newUsername" name="new_username"> <!-- Input for new username -->
+        <button type="submit">Update Username</button>
+    </form>
+
+    <!-- Section for updating the email -->
+    <form id="updateEmailForm">
+        {% csrf_token %}
+        <label for="newEmail">New Email:</label>
+        <input type="email" id="newEmail" name="new_email"> <!-- Input for new email -->
+        <button type="submit">Update Email</button>
+    </form>
+
+    <!-- Section for resetting the password -->
+    <form id="resetPasswordForm">
+        {% csrf_token %}
+        <label for="oldPassword">Old Password:</label>
+        <input type="password" id="oldPassword" name="old_password"> <!-- Input for old password -->
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="new_password"> <!-- Input for new password -->
+        <button type="submit">Reset Password</button>
+    </form>
+
+    <!-- Section for deleting the account -->
+    <form id="deleteAccountForm">
+        {% csrf_token %}
+        <button type="submit">Delete Account</button> <!-- CAUTION: Make sure to confirm this action with the user -->
+    </form>
+
+    <!-- Link to the JavaScript file for settings page functionalities -->
+    <script src="{% static 'js/settings.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <!-- Page title, can be overridden by child templates -->
+        <title>{% block title %}SlimTimer{% endblock %}</title>
+    </head>
+    <body>
+        <!-- Banner area -->
+        <div id="banner">
+            <!-- Site name display -->
+            <span id="site-name">SlimTimer</span>
+            <!-- User information display -->
+            <span id="user-info">
+                {% if user.is_authenticated %}
+                <!-- Display username and Logout option if user is authenticated -->
+                <span id="usernameDisplay">{{ user.username }}</span> | <a href="{% url 'user_logout' %}">Logout</a>
+                {% else %}
+                <!-- Display "Guest" and Login option if user is not authenticated -->
+                {{ user }} | <a href="{% url 'user_login' %}">Login</a>
+                {% endif %}
+            </span>
+        </div>
+
+        <!-- Navigation bar -->
+        <div id="nav-bar">
+            <ul>
+                <!-- List of primary navigation links -->
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'task_management' %}">Manage Tasks</a></li>
+                <li><a href="{% url 'edit_entries' %}">Edit Entries</a></li>
+                <li><a href="{% url 'run_reports' %}">Run Reports</a></li>
+                <li><a href="{% url 'settings' %}">Settings</a></li>
+                <!-- Timer button -->
+                <button id="openTimerWindow">Open Timer</button>
+            </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div id="content">
+            {% block content %}
+            <!-- This is where child templates will inject their content -->
+            {% endblock %}
+        </div>
+
+        <!-- Global JS scripts -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h1>Task Management</h1>
+    
+    <div id="taskContainer">
+        {% csrf_token %}
+        <button id="showCreateTaskForm">Create New Task</button>
+        <button id="deleteSelectedBtn">Delete Selected</button>
+        <div id="createTaskFormContainer" style="display: none;">
+            <form id="createTaskForm">
+                <label for="name">Task Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description">
+                <label for="tags">Tags:</label>
+                <input type="text" id="tags" name="tags">
+                <input type="submit" value="Create Task">
+            </form>
+        </div>
+        <table>
+        <thead>
+            <tr>
+            <th>Select</th>    
+            <th>Name</th>
+            <th>Description</th>
+            <th>Tags</th>
+            <th>Total Time Spent</th>
+            </tr>
+        </thead>
+        <tbody id="taskTableBody">
+            <!-- Rows will be appended here by JavaScript -->
+        </tbody>
+        </table>
+    </div>
+  
+    <script src="{% static 'js/task_management.js' %}"></script>
+{% endblock %}

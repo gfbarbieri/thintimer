@@ -1,0 +1,45 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <!-- Page Heading: Login -->
+        <h1>
+            Login
+        </h1>
+
+        <!-- Login Form -->
+        <form action="{% url 'user_login' %}" method="post">
+            {% csrf_token %}
+
+            <!-- Username Input -->
+            <label for="username">Username:</label>
+            <input type="text" name="username" required><br>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br>
+
+            <!-- Submit Button: Login -->
+            <input type="submit" value="Login">
+        </form>
+
+        {% if error %}
+            <p>
+                {{ error }}
+            </p>
+        {% endif %}
+
+        <!-- Forgot Password Link -->
+        <p>
+            Forgot your password? <a href="{% url 'password_reset' %}">Reset Password</a>
+        </p>
+
+        <!-- Signup Link -->
+        <p>
+            Don't have an account? <a href="{% url 'signup_page' %}">Sign Up</a>
+        </p>
+    </body>
+</html>

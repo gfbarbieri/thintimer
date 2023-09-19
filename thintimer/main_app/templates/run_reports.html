@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h1>Run Reports</h1>
+    <form id="reportForm">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+        
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+        
+        <label for="frequency">Frequency:</label>
+        <select id="frequency" name="frequency">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+            <!-- Add more frequencies if needed -->
+        </select>
+        
+        <button type="button" id="runReportBtn">Run Report</button>
+        <button id="exportBtn">Export to XLSX</button>
+    </form>
+    
+    <table id="reportTable">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Tags</th>
+                <th>Time Spent</th>
+                <!-- Additional columns based on frequency -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <!-- Add your JS links here -->
+    <script src="{% static 'js/run_reports.js' %}"></script>
+{% endblock %}

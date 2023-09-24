@@ -18,7 +18,6 @@
   - [Roadmap](#roadmap)
     - [Testing](#testing)
     - [Documentation](#documentation)
-    - [Hosting and First Production Release](#hosting-and-first-production-release)
     - [Features](#features-1)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
@@ -71,12 +70,13 @@ Here's what the application looks like in action:
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x
-- Django 3.x
+- Python 3.9.18
+- Django 4.1
+- Django Rest Framework 3.14.0
 
 ### Installation
 
-1. Clone this repository: `git clone https://github.com/yourusername/slimtimer-replica.git`
+1. Clone this repository: `git clone https://github.com/gfbarbieri/thintimer.git`
 2. Navigate to the project folder and install dependencies: `pip install -r requirements.txt`
 3. Run migrations: `python manage.py migrate`
 4. Start the development server: `python manage.py runserver`
@@ -138,19 +138,7 @@ See the [CONTRIBUTING.md](path/to/CONTRIBUTING.md) file for guidelines on how to
 - Create documentation page.
 - Create comments for user_auth/tests.py, main_app/tests.py, main_app/serializers.py, main_app/models.py.
 - Find the right license to use for the project.
-- Get out from under all this JavaScript, I mean Jesus Christ.
-
-### Hosting and First Production Release
-- Ask smarter people about hosting and moving to production environment.
-- Find out how to host a website and estimated costs.
-  - Potentially host, but forbid user creation.
-  - Move to some number of users.
-  - Open to anyone.
-- Preparing for a production environment:
-  - Something about .env files.
-  - Something about security keys and DEBUG settings.
-  - Review user data storage procedures.
-  - Implelment email password and username recovery.
+- Get out from under all this JavaScript, I mean Jesus Christ. Or improve the code base, I would take either.
 
 ### Features
 - Create privacy policy page to ensure users about data storage, access, and usage.

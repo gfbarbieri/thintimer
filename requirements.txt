@@ -1,7 +1,12 @@
-asgiref @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_edg6nzjrx0/croots/recipe/asgiref_1661287549316/work
-Django @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_066uop7vqa/croots/recipe/django_1661292540858/work
+asgiref==3.5.2
+dj-database-url==2.1.0
+Django==4.1
 djangorestframework==3.14.0
 et-xmlfile==1.1.0
 openpyxl==3.1.2
+psycopg2==2.9.7
+python-decouple==3.8
 pytz==2023.3.post1
-sqlparse @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_cb77ukgrpu/croot/sqlparse_1690901947630/work
+sqlparse==0.4.4
+typing_extensions==4.8.0
+whitenoise==6.5.0

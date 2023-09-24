@@ -153,7 +153,7 @@ See the [CONTRIBUTING.md](path/to/CONTRIBUTING.md) file for guidelines on how to
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 

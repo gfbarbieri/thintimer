@@ -159,13 +159,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
-- Richard White (and the SlimTimer team?) for the original application and inspiration.
-- Guy claiming to re-build SlimTimer, but never did for inspiration.
-- ChatGPT, which built the application, as I know nothing about web development.
+- Richard White of [SlimTimer](slimtimer.com) for the original application and inspiration.
+- ChatGPT, which built the application, as I had no experience with web development when starting the project.
 - Django framework for backend support.
+- Heroku for hosting support.
 
 ---
 
 ## Contact
 
-For more information or queries, contact [gfbarbieri@example.com](mailto:your-email@example.com).
+For more information or queries, contact [gfbarbieri@gmail.com](mailto:gfbarbieri@gmail.com).

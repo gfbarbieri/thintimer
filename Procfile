@@ -1,1 +1,1 @@
-web: gunicorn thintimer.wsgi
+web: gunicorn thintimer.thintimer.wsgi

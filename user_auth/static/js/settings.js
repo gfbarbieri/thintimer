@@ -136,6 +136,7 @@ function deleteAccount() {
 }
 
 // Attach submit event listener to 'deleteAccountForm'.
-document.getElementById('deleteAccountForm').addEventListener('submit', function() {
+document.getElementById('deleteAccountForm').addEventListener('submit', function(event) {
+  event.preventDefault();
   deleteAccount(); // Call function to handle account deletion.
 });

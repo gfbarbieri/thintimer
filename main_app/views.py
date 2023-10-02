@@ -66,7 +66,7 @@ class TaskViewSet(viewsets.ModelViewSet):
         QuerySet
             A QuerySet of Task objects.
         """
-        return Task.objects.filter(user=self.request.user).order_by('-created_at')
+        return Task.objects.filter(user=self.request.user).order_by('name')
 
     def perform_create(self, serializer):
         """

@@ -19,7 +19,7 @@ function fetchTasks() {
             listItem.textContent = `${task.name} - ${task.total_time_spent || '00:00:00'}`;
             listItem.dataset.taskId = task.id;
 
-            listItem.addEventListener('click', function() {
+            listItem.addEventListener('click', function(event) {
                 event.stopPropagation();
                 startTimer(task.id);
             });

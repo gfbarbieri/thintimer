@@ -189,7 +189,7 @@ class EntryViewSet(viewsets.ModelViewSet):
         date_obj = datetime.strptime(date, '%Y-%m-%d').date()
         
         # Filter entries by the given date
-        entries = Entry.objects.filter(task__user=request.user, start_time__date=date_obj)
+        entries = Entry.objects.filter(task__user=request.user, start_time__date=date_obj).order_by('start_time')
         
         # Serialize the entries
         serializer = EntrySerializer(entries, many=True)
